@@ -1,2 +1,7 @@
 #!/bin/bash
-python3 -m compileall $PYFILE
+python3 -m compileall "$pyfile"
+if [ -f "$output" ]; then
+	echo "Compilation successful"
+else
+	echo "Compilation failed"
+fi

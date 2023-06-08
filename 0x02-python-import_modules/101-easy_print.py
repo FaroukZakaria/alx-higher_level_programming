@@ -1,2 +1,7 @@
 #!/usr/bin/python3
-exec("print('#pythoniscool')")
+def main():
+    exec("print('#pythoniscool')")
+
+
+if __name__ == '__main__':
+    main()

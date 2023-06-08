@@ -11,7 +11,7 @@ def main():
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
     elif args[1] not in '+-*/':
-        print("Unknown operator {}. Available operators: +, -, * and /".format(args[2]))
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     elif args[1] == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))

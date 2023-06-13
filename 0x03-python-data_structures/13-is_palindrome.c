@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 /**
  * is_palindrome - s
  * @head: s
@@ -6,15 +7,42 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, j = 0, k = 0;
-	listint_t **head_two = *head, **home = *head;
+	listint_t *cur = NULL, *next = NULL, *prev = NULL, *p = *head, *q = *head, *new;
 
-	while (*head_two != NULL)
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+	while (1)
 	{
-		*head_two->next;
-		i++;
+		p = p->next->next;
+		if (p == NULL)
+		{
+			new = q->next;
+			break;
+		}
+		else if (p->next == NULL)
+		{
+			new = q->next->next;
+			break;
+		}
+		q = q->next;
 	}
-	*head_two = *head;
-	for (j = 0; j < i - k; k++)
+	q->next = NULL;
+	q = *head;
+	cur = new;
+	while (cur != NULL)
 	{
-
+		next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
+	}
+	new = prev;
+	while (q != NULL && new != NULL)
+	{
+		if (q->n != new->n)
+			return (0);
+		q = q->next;
+		new = new->next;
+	}
+	return (1);
+}

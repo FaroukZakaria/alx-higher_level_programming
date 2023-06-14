@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if roman_string is None or not isinstance(roman_string, str):
-        return(0)
+        return (0)
     string = []
+    roman_string = roman_string.upper()
     for i in roman_string:
         if i == 'I':
             string.append(1)

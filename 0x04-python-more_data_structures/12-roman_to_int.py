@@ -34,4 +34,6 @@ def roman_to_int(roman_string):
             continue
         else:
             res += i
+    if res > 3999:
+        return(0)
     return(res)

@@ -24,7 +24,7 @@ def roman_to_int(roman_string):
         if i != 'I':
             just_I = False
             break
-    if just_I == True:
+    if just_I is True:
         for i in string:
             res += i
         return(res)

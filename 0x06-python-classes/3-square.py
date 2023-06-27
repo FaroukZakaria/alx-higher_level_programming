@@ -11,7 +11,7 @@ class Square:
         elif size < 0:
             raise("size must be >= 0")
         self.__size = size
-    """Define public area"""
+
     def area(self):
         """Return area"""
         return (self.__size ** 2)

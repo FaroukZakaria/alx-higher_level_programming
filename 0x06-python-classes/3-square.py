@@ -10,7 +10,8 @@ class Square:
             raise("size must be an integer")
         elif size < 0:
             raise("size must be >= 0")
-        self.__size = size ** 2
+        self.__size = size
     """Define public area"""
     def area(self):
-        return (self.__size)
+        """Return area"""
+        return (self.__size ** 2)

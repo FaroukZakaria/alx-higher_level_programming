@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 class Square:
-    """ Square:
-                square
-    """
-    Square = None
+    """ A class representing a square"""

@@ -7,11 +7,11 @@ class MagicClass:
     """definition"""
     def __init__(self, radius=0):
         """radius"""
-        if type(radius) is not int:
-            if type(radius) is not float:
-                raise TypeError('radius must be a number')
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
         else:
             self.__radius = radius
+            return
 
     def area(self):
         """area"""

@@ -23,16 +23,28 @@ print(mysquare.position)
 
 print("--lol7")
 
-my_square = Square(3, "Position")
+try:
+    my_square = Square(3, "Position")
+except Exception as e:
+    print(e)
 
 print("--lol8")
 
-my_square = Square(3, (1, ))
+try:
+    my_square = Square(3, (1, ))
+except Exception as e:
+    print(e)
 
 print("--lol9")
 
-my_square = Square(3, (1, -3))
+try:
+    my_square = Square(3, (1, -3))
+except Exception as e:
+    print(e)
 
 print("--lol10")
 
-my_square = Square(3, (1, "3"))
+try:
+    my_square = Square(3, (1, "3"))
+except Exception as e:
+    print(e)

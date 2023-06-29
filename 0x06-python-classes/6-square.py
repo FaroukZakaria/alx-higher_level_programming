@@ -12,6 +12,7 @@ class Square:
     def size(self):
         """getter (actual size)"""
         return (self.__size)
+
     def position(self):
         """getter (position)"""
         return (self.__size)
@@ -23,6 +24,7 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def position(self, value):
         if isinstance(value, tuple) and all(isinstance(i, int) for i in value):
             self.__position = value

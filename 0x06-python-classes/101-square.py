@@ -50,3 +50,14 @@ class Square:
                 print('')
             for i in range(self.__size):
                 print(' ' * self.__position[0] + '#' * self.__size)
+    def __str__(self):
+        """str representation"""
+        lines = []
+        if self.size == 0:
+            lines.append("")
+        else:
+            for i in range(self.__position[1]):
+                lines.append("")
+            for i in range(self.__size):
+                lines.append(' ' * self.__position[0] + '#' * self.__size)
+            return "\n".join(lines)

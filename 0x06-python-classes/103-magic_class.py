@@ -2,6 +2,9 @@
 """class"""
 
 
+import math
+
+
 class MagicClass:
     """definition"""
     def __init__(self, radius=0):

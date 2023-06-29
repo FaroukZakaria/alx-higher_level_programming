@@ -15,3 +15,13 @@ my_square.size = 0
 my_square.my_print()
 
 print("--")
+
+mysquare = Square(3)
+mysquare.my_print()
+
+print("--")
+
+mysquare = Square(10)
+mysquare.my_print()
+
+print("--")

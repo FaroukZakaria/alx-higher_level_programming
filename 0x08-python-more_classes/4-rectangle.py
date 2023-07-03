@@ -48,5 +48,7 @@ class Rectangle:
         for i in range(self.__height):
             rect += "#" * self.__width + "\n"
         return (rect.rstrip())
+
     def __repr__(self):
-        return ("Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")")
+        return ("Rectangle(" + str(self.__width) + ", " +
+                str(self.__height) + ")")

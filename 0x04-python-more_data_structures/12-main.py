@@ -6,6 +6,15 @@ roman_to_int = __import__('12-roman_to_int').roman_to_int
 roman_number = "x"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
+roman_number = ""
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "a"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "1"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
 roman_number = "X"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 

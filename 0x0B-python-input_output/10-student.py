@@ -11,6 +11,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """S"""
         if isinstance(attrs, list) is True and
             all(isinstance(i, str) is True for i in attrs):
                 for j in attrs:

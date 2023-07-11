@@ -12,7 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         if isinstance(attrs, list) is True and
-            isinstance(i, str) for i in attrs:
+            all(isinstance(i, str) is True for i in attrs):
                 for j in attrs:
                     if hasattr(self, j) is True:
                         getattr(self, j)

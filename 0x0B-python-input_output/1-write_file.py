@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""s"""
+"""sss"""
+
+
 def write_file(filename="", text=""):
-    """s"""
+    """sss"""
     with open(filename, 'w') as f:
         fp = f.write(text)
         return (fp)

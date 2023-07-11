@@ -14,7 +14,5 @@ class Student:
         """S"""
         if (isinstance(attrs, list) is True and
                 all(isinstance(i, str) is True for i in attrs)):
-            for j in attrs:
-                if hasattr(self, j) is True:
-                    return {j: getattr(self, j)}
+            return {j: getattr(self, j) for j in attrs if hasattr(self, j)}
         return (self.__dict__)

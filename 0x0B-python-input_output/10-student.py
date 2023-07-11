@@ -12,10 +12,10 @@ class Student:
 
     def to_json(self, attrs=None):
         """S"""
-        if isinstance(attrs, list) is True and
-            all(isinstance(i, str) is True for i in attrs):
-                for j in attrs:
-                    if hasattr(self, j) is True:
-                        getattr(self, j)
-                    return (j)
+        if (isinstance(attrs, list) is True and
+                all(isinstance(i, str) is True for i in attrs)):
+            for j in attrs:
+                if hasattr(self, j) is True:
+                    getattr(self, j)
+                return (j)
         return (self.__dict__)

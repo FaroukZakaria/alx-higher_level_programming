@@ -1,20 +1,16 @@
 #!/usr/bin/node
 
-import { argv } from 'node:process';
+const args = process.argv.length;
 
-argv.forEach((val, index) => {
-	  console.log(`${index}: ${val}`);
-});
-
-const args = argv.slice(2);
-
-if (args.length === 0)
+if (args === 2)
 {
-	  console.log('No argument');
-} else if (args.length === 1)
+	console.log('No argument');
+}
+else if (args === 3)
 {
-	  console.log('Argument found');
-} else
+	console.log('Argument found');
+}
+else
 {
-	  console.log('Arguments found');
+	console.log('Arguments found');
 }

@@ -1,9 +1,5 @@
 #!/usr/bin/node
 
-if (process.argv.length !== 4) {
-  process.exit(1);
-}
-
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
 

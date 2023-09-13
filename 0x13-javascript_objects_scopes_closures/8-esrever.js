@@ -1,9 +1,10 @@
 #!/usr/bin/node
-let i = 0;
 exports.esrever = function (list) {
-  if (i < list.length) {
-    const item = list[i++];
-    exports.esrever(list);
-    console.log(item);
+  let i = list.length - 1;
+  const tsil = [];
+  while (i >= 0) {
+    tsil.push(list[i]);
+    i--;
   }
+  return (tsil);
 };

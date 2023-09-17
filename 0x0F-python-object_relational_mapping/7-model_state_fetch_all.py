@@ -10,9 +10,8 @@ if __name__ == "__main__":
 
     if len(sys.argv) < 4:
         exit(1)
-    engine = create_engine("""
-                mysql+mysqldb://{}:{}@localhost:3306/{}
-            """.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    Str = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
+    engine = create_engine(Str.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     base.metadata.create_all(engine)
     session = Session()

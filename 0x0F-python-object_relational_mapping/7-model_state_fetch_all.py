@@ -13,10 +13,10 @@ if __name__ == "__main__":
     engine = create_engine("""
                 mysql+mysqldb://{}:{}@localhost:3306/{}
             """.format(sys.argv[1], sys.argv[2], sys.argv[3]))
-    session = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
     base.metadata.create_all(engine)
-    session1 = session()
-    results = session1.query(State).order_by(State.id).all()
+    session = Session()
+    results = session.query(State).order_by(State.id).all()
     for state in results:
-        print('{}: {}'.format(state.id, state.name))
-    session1.close()
+        print("{}: {}".format(state.id, state.name))
+    session.close()

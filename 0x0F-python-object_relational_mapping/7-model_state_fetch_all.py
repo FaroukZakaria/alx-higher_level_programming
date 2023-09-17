@@ -2,6 +2,7 @@
 """ All states SQLAlchemy """
 
 if __name__ == "__main__":
+
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy.ext.declarative import declarative_base
@@ -13,7 +14,7 @@ if __name__ == "__main__":
     Str = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(Str.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
-    base.metadata.create_all(engine)
+    Base.metadata.create_all(engine)
     session = Session()
     results = session.query(State).order_by(State.id).all()
     for state in results:

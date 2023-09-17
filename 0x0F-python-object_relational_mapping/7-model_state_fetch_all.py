@@ -14,7 +14,7 @@ if __name__ == "__main__":
             """.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     session = sessionmaker(bind=engine)
     base.metadata.create_all(engine)
-    session1 = session()
+    session1 = Session()
     results = session1.query(State).order_by(State.id).all()
     for state in results:
         print('{}: {}'.format(state.id, state.name))

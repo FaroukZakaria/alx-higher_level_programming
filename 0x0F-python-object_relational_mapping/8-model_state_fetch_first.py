@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     Str = 'mysql+mysql://{}:{}@localhost:3306/{}'
     engine = create_engine(Str.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     results = session.query(State).first()

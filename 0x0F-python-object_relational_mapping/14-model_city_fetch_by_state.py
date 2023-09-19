@@ -18,4 +18,3 @@ if __name__ == "__main__":
             .filter(State.id == City.state_id)
             ):
         print("{}: ({}) {}".format(i[0], str(i[1]), i[2]))
-    session.close()

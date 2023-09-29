@@ -9,6 +9,5 @@ if __name__ == "__main__":
     print(
     "Body response:\n"
     "\t- type: {}\n"
-    "\t- content: {}\n"
-    .format(type(response.text), response.text)
+    "\t- content: {}\n".format(type(response.text), response.text)
 )

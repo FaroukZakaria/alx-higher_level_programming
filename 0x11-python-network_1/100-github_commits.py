@@ -12,4 +12,4 @@ if __name__ == "__main__":
     commits = requests.get(url).json()
     for commit in commits:
         name = commit.get("commit").get("author").get("name")
-        print("{}: {}".format(commit.get("sha"), name)
+        print("{}: {}".format(commit.get("sha"), name))

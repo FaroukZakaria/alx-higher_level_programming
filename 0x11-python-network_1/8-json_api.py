@@ -9,7 +9,7 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     data = requests.post(url, data={'q': q})
     try:
-        joined = data.jsn()
+        joined = data.json()
         if joined:
             print("[{}] {}".format(joined['id'], joined['name']))
         else:

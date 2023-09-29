@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl to end
-curl -fsl "$1"
+curl -fsL "$1"

@@ -8,7 +8,7 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         content = response.read()
         content_str = content.decode('utf-8')
-        print("Body responese:")
+        print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
         print("\t- utf8 content: {}".format(content_str))

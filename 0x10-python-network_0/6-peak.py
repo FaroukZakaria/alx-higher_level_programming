@@ -4,7 +4,13 @@
 
 def find_peak(list_of_integers):
     """ finds peak """
-    if list_of_integers == []:
-        return (None)
-    else:
-        return (sorted(list_of_integers)[-1])
+    lst = None
+    for i in range(len(list_of_integers)):
+        if i == 0:
+            lst = list_of_integers[i]
+            i += 1
+        if list_of_integers[i] >= list_of_integers[i - 1]:
+            lst = list_of_integers[i]
+        else:
+            continue
+    return (lst)

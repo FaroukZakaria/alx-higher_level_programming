@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const req = require('request');
 const url = process.argv[2];
-const wedge = 'https://swapi-api.alx-tools.com/api/people/18/';
+const wedge = '/people/18/';
 
 req(url, (error, response, body) => {
   if (error) {

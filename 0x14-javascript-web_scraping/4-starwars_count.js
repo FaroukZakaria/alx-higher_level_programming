@@ -8,10 +8,6 @@ req(url, (error, response, body) => {
     console.error(`${error.messaage}`);
     return;
   }
-  const data = JSON.parse(body);
-  let count = 0;
-  for (const key of data.results) {
-    count += key.characters.filter(char => char === wedge).length;
-  }
+  const count = (body.split(wedge).length - 1);
   console.log(count);
 });

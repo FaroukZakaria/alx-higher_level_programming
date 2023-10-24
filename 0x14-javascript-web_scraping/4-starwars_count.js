@@ -5,8 +5,7 @@ const wedge = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 req(url, (error, response, body) => {
   if (error) {
-    console.error(`${error.messaage}`);
-    return;
+    console.log(`${error.messaage}`);
   }
   const count = (body.split(wedge).length - 1);
   console.log(count);

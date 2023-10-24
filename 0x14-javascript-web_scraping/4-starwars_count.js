@@ -12,6 +12,6 @@ req(url, (error, response, body) => {
   let count = 0;
   for (const key of data.results) {
     count += key.characters.filter(char => char === wedge).length;
-    }
+  }
   console.log(count);
 });
